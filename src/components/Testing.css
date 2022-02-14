@@ -1,0 +1,36 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.Search{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.addPersons{
+    width: 100%;
+
+}
+.Form_Persons{
+    width: 100%;
+}
+.cards{
+
+    width: 80%;
+    margin-top: 1rem;
+    justify-content: center;
+}
+.nameAdress{
+    margin-left: 30rem;
+
+}
+
+.actionIcons{
+    display: flex;
+    margin-left:  auto;
+}
+.cards_alement{
+    display: flex;
+}
