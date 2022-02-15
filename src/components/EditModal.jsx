@@ -32,7 +32,6 @@ function EditModal(props) {
             data:person
 
         }).then(res => {
-            console.log(res)
             props.action(false)
         })
     }

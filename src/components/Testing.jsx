@@ -61,9 +61,7 @@ function Testing(props) {
                 url:'Request/houses/'+street.id,
                 method:'GET',
             }).then(res=>{
-                console.log(res.data)
                 setHouses(res.data)
-                console.log(street)
             })
         }
     }
@@ -76,9 +74,7 @@ function Testing(props) {
                 url: 'Request/house_flats/' + house.id,
                 method: 'GET',
             }).then(res => {
-                console.log(res.data)
                 setHomes(res.data)
-                console.log(house)
             })
         }
     }
@@ -94,8 +90,7 @@ function Testing(props) {
                 params:{addressId:home.id}
             }).then(res => {
                 setPersons(res.data)
-                console.log(res)
-                // console.log(adress)
+
 
             })
         }
@@ -194,7 +189,6 @@ function Testing(props) {
                 <span><CreditCardOutlined  style={{fontSize:'15px',cursor:'pointer'}} /> </span>
                 </div>
                 </div>
-                {/*<button onClick={()=>setShowAddModal(true)}> Qo'shish</button>*/}
                 <Row gutter={16}>
                     { persons.length > 0 && persons.map((item,id) =>
                         <Col span={6} key={id}>
@@ -202,7 +196,7 @@ function Testing(props) {
                                 style={{ width: 300, marginTop: 16 }}
 
                                 actions={[
-                                    <DeleteOutlined  key="delete"  />,
+                                    <DeleteOutlined  key="delete"  onClick={()=>handleDelete(item.id)} />,
                                     <EditOutlined key="edit" onClick={()=>handleEdit(item.name, item.phone, item.email, item.id)}/>,
                                 ]}
                             >

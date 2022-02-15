@@ -14,6 +14,7 @@ function DeletePerson(props) {
             url: '/HousingStock/bind_client/'+props.personId ,
             method: 'DELETE',
         }).then(res => {
+
             props.action(false)
         })
     }
@@ -27,7 +28,7 @@ function DeletePerson(props) {
                         Отмена
                     </Button>
                     <Button key="submit" type="primary" onClick={()=>deletePerson()}>
-                        Удалит
+                        Удалить
                     </Button>
                 </>
 
